@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "d01b5539-c5f6-4ee4-b053-8a6b4c77aa14",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30813896"
+	},
+	"item": [
+		{
+			"name": "Đăng kí, đăng nhập",
+			"item": [
+				{
+					"name": "Đăng kí",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user13@gmail.com\",\r\n      \"mat_khau\": \"abc123\",\r\n      \"ho_ten\": \"Huy\",\r\n      \"tuoi\": 17\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Đăng nhập",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user13@gmail.com\",\r\n      \"mat_khau\": \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/log-in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"log-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang chủ",
+			"item": [
+				{
+					"name": "Lấy danh sách ảnh",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/img/getListImg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"getListImg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tìm kiếm ảnh theo tên",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/img/list-img-by-name/Image12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"list-img-by-name",
+								"Image12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang chi tiết",
+			"item": [
+				{
+					"name": "Lấy thông tin ảnh và người tạo ảnh",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/img/getImgDetail/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"getImgDetail",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông tin bình luận",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/img/getComment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"getComment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông tin đã lưu hình hay chưa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/img/checkImgSaved/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"checkImgSaved",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lưu thông tin bình luận của người dùng",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImRhdGEiOnsibmd1b2lfZHVuZ19pZCI6MTMsImVtYWlsIjoidXNlcjEzQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiJDJiJDEwJFpXZ0ZDc09MYmhrSVBOV3FIU2Ria2UyS2FleG5vM0lLdVZkSFc1VEZiWGt5ajdQQldVTmlLIiwiaG9fdGVuIjoiSHV5IiwidHVvaSI6MTcsImFuaF9kYWlfZGllbiI6IiJ9fSwiaWF0IjoxNzAxNTMyOTc1LCJleHAiOjE4NTkzMjA5NzV9.eszWk-XPX3R72ZmvpzWV0Mdi3Fr11vR6srFFQxt1YJQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noi_dung\":\"xấu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/img/createComment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"createComment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang quản lí ảnh",
+			"item": [
+				{
+					"name": "Lấy thông tin user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/getUserDetail/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getUserDetail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách ảnh đã lưu theo user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/img/getListImgSaved/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"getListImgSaved",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách đã tạo theo user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/img/getListImgCreate/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"getListImgCreate",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa ảnh",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImRhdGEiOnsibmd1b2lfZHVuZ19pZCI6MTMsImVtYWlsIjoidXNlcjEzQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiJDJiJDEwJFpXZ0ZDc09MYmhrSVBOV3FIU2Ria2UyS2FleG5vM0lLdVZkSFc1VEZiWGt5ajdQQldVTmlLIiwiaG9fdGVuIjoiSHV5IiwidHVvaSI6MTcsImFuaF9kYWlfZGllbiI6IiJ9fSwiaWF0IjoxNzAxNTMyOTc1LCJleHAiOjE4NTkzMjA5NzV9.eszWk-XPX3R72ZmvpzWV0Mdi3Fr11vR6srFFQxt1YJQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/img/deleteImg/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"deleteImg",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang thêm ảnh",
+			"item": [
+				{
+					"name": "Thêm 1 ảnh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImRhdGEiOnsibmd1b2lfZHVuZ19pZCI6MTMsImVtYWlsIjoidXNlcjEzQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiJDJiJDEwJFpXZ0ZDc09MYmhrSVBOV3FIU2Ria2UyS2FleG5vM0lLdVZkSFc1VEZiWGt5ajdQQldVTmlLIiwiaG9fdGVuIjoiSHV5IiwidHVvaSI6MTcsImFuaF9kYWlfZGllbiI6IiJ9fSwiaWF0IjoxNzAxNTMyOTc1LCJleHAiOjE4NTkzMjA5NzV9.eszWk-XPX3R72ZmvpzWV0Mdi3Fr11vR6srFFQxt1YJQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/HP/Pictures/Screenshots/phong-tro-la-loai-hinh-nha-o-pho-bien-gia-re-tien-loi-cho-sinh-vien-va-nguoi-di-lam.png"
+								},
+								{
+									"key": "ten_hinh",
+									"value": "Image13",
+									"type": "text"
+								},
+								{
+									"key": "mo_ta",
+									"value": "abc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/addImg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"addImg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang chỉnh sửa thông tin cá nhân",
+			"item": [
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImRhdGEiOnsibmd1b2lfZHVuZ19pZCI6MTMsImVtYWlsIjoidXNlcjEzQGdtYWlsLmNvbSIsIm1hdF9raGF1IjoiJDJiJDEwJFpXZ0ZDc09MYmhrSVBOV3FIU2Ria2UyS2FleG5vM0lLdVZkSFc1VEZiWGt5ajdQQldVTmlLIiwiaG9fdGVuIjoiSHV5IiwidHVvaSI6MTcsImFuaF9kYWlfZGllbiI6IiJ9fSwiaWF0IjoxNzAxNTMyOTc1LCJleHAiOjE4NTkzMjA5NzV9.eszWk-XPX3R72ZmvpzWV0Mdi3Fr11vR6srFFQxt1YJQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\": \"user13@gmail.com\",\r\n      \"mat_khau\": \"abc123\",\r\n      \"ho_ten\": \"Quý\",\r\n      \"tuoi\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
